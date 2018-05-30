@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>De Heer Software</Authors>
     <Company>De Heer Software</Company>
-    <Description>Make Azure Storage unit testable</Description>
+    <Description>Provides interfaces to make Azure Storage unit testable</Description>
     <PackageLicenseUrl>https://github.com/DeHeerSoftware/Azure.Storage.Wrappers/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/DeHeerSoftware/Azure.Storage.Wrappers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DeHeerSoftware/Azure.Storage.Wrappers</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>0.0.2.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
