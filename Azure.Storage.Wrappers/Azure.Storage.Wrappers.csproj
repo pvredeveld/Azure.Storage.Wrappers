@@ -9,7 +9,7 @@
     <PackageLicenseUrl>https://github.com/DeHeerSoftware/Azure.Storage.Wrappers/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/DeHeerSoftware/Azure.Storage.Wrappers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DeHeerSoftware/Azure.Storage.Wrappers</RepositoryUrl>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
