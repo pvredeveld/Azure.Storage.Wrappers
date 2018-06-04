@@ -3,6 +3,7 @@ using Azure.Storage.Wrappers.Blob.Wrappers;
 using Azure.Storage.Wrappers.File.Interfaces;
 using Azure.Storage.Wrappers.File.Wrappers;
 using Azure.Storage.Wrappers.Interfaces;
+using Azure.Storage.Wrappers.Table.Interfaces;
 using Microsoft.WindowsAzure.Storage;
 
 namespace Azure.Storage.Wrappers.Wrappers
@@ -24,6 +25,11 @@ namespace Azure.Storage.Wrappers.Wrappers
         public ICloudBlobClient CreateCloudBlobClient()
         {
             return new CloudBlobClientWrapper(cloudStorageAccountImplementation.CreateCloudBlobClient());
+        }
+
+        public ICloudTableClient CreateCloudTableClient()
+        {
+            return new CloudTableClientWrapper(cloudStorageAccountImplementation.CreateCloudTableClient());
         }
     }
 }
