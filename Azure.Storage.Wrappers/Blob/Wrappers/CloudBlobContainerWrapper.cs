@@ -1,4 +1,5 @@
-﻿using Azure.Storage.Wrappers.Blob.Interfaces;
+﻿using System.Threading.Tasks;
+using Azure.Storage.Wrappers.Blob.Interfaces;
 using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace Azure.Storage.Wrappers.Blob.Wrappers
@@ -11,9 +12,15 @@ namespace Azure.Storage.Wrappers.Blob.Wrappers
         {
             this.container = container;
         }
+
         public ICloudBlockBlob GetBlockBlobReference(string path)
         {
             return new CloudBlockBlobWrapper(container.GetBlockBlobReference(path));
-       }
+        }
+
+        public Task<bool> CreateIfNotExistsAsync()
+        {
+            return container.CreateIfNotExistsAsync();
+        }
     }
 }

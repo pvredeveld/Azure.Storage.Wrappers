@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace Azure.Storage.Wrappers.Blob.Interfaces
+﻿namespace Azure.Storage.Wrappers.Blob.Interfaces
 {
     /// <summary>
     /// Minimal interface of CloudBlobClient
@@ -13,6 +11,6 @@ namespace Azure.Storage.Wrappers.Blob.Interfaces
         /// </summary>
         /// <param name="containerName">A string containing the name of the container.</param>
         /// <returns>An instance of an <see cref="ICloudBlobContainer"/>.</returns>
-        Task<ICloudBlobContainer> GetContainerReferenceAsync(string containerName);
+        ICloudBlobContainer GetContainerReference(string containerName);
     }
 }

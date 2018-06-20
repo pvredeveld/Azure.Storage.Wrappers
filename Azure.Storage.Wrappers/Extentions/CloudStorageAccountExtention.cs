@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Azure.Storage.Wrappers.Blob.Interfaces;
+﻿using Azure.Storage.Wrappers.Blob.Interfaces;
 using Azure.Storage.Wrappers.Interfaces;
 
 namespace Azure.Storage.Wrappers.Extentions
@@ -10,15 +9,15 @@ namespace Azure.Storage.Wrappers.Extentions
     public static class CloudStorageAccountExtention
     {
         /// <summary>
-        /// 
+        /// Gets a reference to a <see cref="ICloudBlobContainer"/> inside the <see cref="ICloudStorageAccount"/>
         /// </summary>
-        /// <param name="storageAccount"></param>
-        /// <param name="containerName"></param>
+        /// <param name="storageAccount">The <see cref="ICloudStorageAccount"/></param>
+        /// <param name="containerName">The name of the container</param>
         /// <returns>An instance of an <see cref="ICloudBlobContainer"/>.</returns>
-        public static async Task<ICloudBlobContainer> GetContainerReferenceAsync(this ICloudStorageAccount storageAccount, string containerName)
+        public static ICloudBlobContainer GetContainerReference(this ICloudStorageAccount storageAccount, string containerName)
         {
             var blobClient = storageAccount.CreateCloudBlobClient();
-            return await blobClient.GetContainerReferenceAsync(containerName);
+            return blobClient.GetContainerReference(containerName);
         }
     }
 }

@@ -13,10 +13,9 @@ namespace Azure.Storage.Wrappers.Blob.Wrappers
             this.cloudBlobClientImplementation = cloudBlobClientImplementation;
         }
 
-        public async Task<ICloudBlobContainer> GetContainerReferenceAsync(string containerName)
+        public ICloudBlobContainer GetContainerReference(string containerName)
         {
             var container = cloudBlobClientImplementation.GetContainerReference(containerName);
-            await container.CreateIfNotExistsAsync();
             return new CloudBlobContainerWrapper(container);
         }
     }

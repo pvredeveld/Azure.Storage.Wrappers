@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Authors>De Heer Software</Authors>
     <Company>De Heer Software</Company>
     <Description>Provides interfaces to make Azure Storage unit testable</Description>
@@ -11,9 +11,9 @@
     <RepositoryUrl>https://github.com/DeHeerSoftware/Azure.Storage.Wrappers</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>0.0.2.0</AssemblyVersion>
-    <FileVersion>0.0.2.0</FileVersion>
-    <PackageReleaseNotes>Table storage wrappers added</PackageReleaseNotes>
+    <AssemblyVersion>0.0.3.0</AssemblyVersion>
+    <FileVersion>0.0.3.0</FileVersion>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <PackageId>AzureStorage.Wrappers</PackageId>
   </PropertyGroup>
 
