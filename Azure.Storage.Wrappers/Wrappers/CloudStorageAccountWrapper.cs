@@ -4,6 +4,7 @@ using Azure.Storage.Wrappers.File.Interfaces;
 using Azure.Storage.Wrappers.File.Wrappers;
 using Azure.Storage.Wrappers.Interfaces;
 using Azure.Storage.Wrappers.Table.Interfaces;
+using Azure.Storage.Wrappers.Table.Wrappers;
 using Microsoft.WindowsAzure.Storage;
 
 namespace Azure.Storage.Wrappers.Wrappers

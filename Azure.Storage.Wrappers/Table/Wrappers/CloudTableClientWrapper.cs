@@ -7,11 +7,11 @@ using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Shared.Protocol;
 using Microsoft.WindowsAzure.Storage.Table;
 
-namespace Azure.Storage.Wrappers.Wrappers
+namespace Azure.Storage.Wrappers.Table.Wrappers
 {
-    public class CloudTableClientWrapper : ICloudTableClient
+    internal class CloudTableClientWrapper : ICloudTableClient
     {
-        private CloudTableClient cloudTableClientImplementation;
+        private readonly CloudTableClient cloudTableClientImplementation;
 
         public CloudTableClientWrapper(CloudTableClient cloudTableClientImplementation)
         {
@@ -28,9 +28,9 @@ namespace Azure.Storage.Wrappers.Wrappers
 
         public TableRequestOptions DefaultRequestOptions => cloudTableClientImplementation.DefaultRequestOptions;
 
-        public CloudTable GetTableReference(string tableName)
+        public ICloudTable GetTableReference(string tableName)
         {
-            return cloudTableClientImplementation.GetTableReference(tableName);
+            return new CloudTableWrapper(cloudTableClientImplementation.GetTableReference(tableName));
         }
 
         public AuthenticationScheme AuthenticationScheme => cloudTableClientImplementation.AuthenticationScheme;
