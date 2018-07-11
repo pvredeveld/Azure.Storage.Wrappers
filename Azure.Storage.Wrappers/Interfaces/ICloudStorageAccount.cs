@@ -1,5 +1,6 @@
 ﻿using Azure.Storage.Wrappers.Blob.Interfaces;
 using Azure.Storage.Wrappers.File.Interfaces;
+using Azure.Storage.Wrappers.Queue.Interfaces;
 using Azure.Storage.Wrappers.Table.Interfaces;
 
 namespace Azure.Storage.Wrappers.Interfaces
@@ -26,5 +27,11 @@ namespace Azure.Storage.Wrappers.Interfaces
         /// </summary>
         /// <returns>A <see cref="ICloudTableClient"/> object.</returns>
         ICloudTableClient CreateCloudTableClient();
+
+        /// <summary>
+        /// Creates a Queue service client.
+        /// </summary>
+        /// <returns>A <see cref="ICloudQueueClient"/> object.</returns>
+        ICloudQueueClient CreateCloudQueueClient();
     }
 }
