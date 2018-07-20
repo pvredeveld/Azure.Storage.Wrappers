@@ -12,4 +12,14 @@
         /// <returns></returns>
         ICloudStorageAccount FetchByConnectionString(string connectionString);
     }
+
+    public interface ICloudStorageAccountFactory2
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        ICloudStorageAccount FetchCloudStorageAccount();
+    }
+
 }

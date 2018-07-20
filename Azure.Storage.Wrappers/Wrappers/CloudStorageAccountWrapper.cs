@@ -15,6 +15,11 @@ namespace Azure.Storage.Wrappers.Wrappers
     {
         private readonly CloudStorageAccount cloudStorageAccountImplementation;
 
+        public CloudStorageAccountWrapper(string connectionString):this(CloudStorageAccount.Parse(connectionString))
+        {
+            
+        }
+
         public CloudStorageAccountWrapper(CloudStorageAccount cloudStorageAccountImplementation)
         {
             this.cloudStorageAccountImplementation = cloudStorageAccountImplementation;
